@@ -79,21 +79,21 @@ export const experienceRows: readonly ExperienceRow[] = [
   {
     company: "Innotech",
     dates: "May 2023 — Jul 2024",
-    role: "Senior Frontend Developer",
+    role: "Senior Frontend Engineer",
     description:
       "Frontend, Sfera.Releases — the release-management module of an enterprise DevOps platform that scaled to ~20,000 daily users at a top-2 Russian bank. On the team from the product's 2023 launch: built the release-lifecycle UI and the frontend for Netflix Conductor workflow orchestration — dozens of production workflows. Contributed to the platform's shared UI kit.",
   },
   {
     company: "Joom",
     dates: "Sep 2021 — Mar 2023",
-    role: "Software Engineer",
+    role: "Frontend Engineer",
     description:
       "Frontend of an in-house ticketing system for the 300-person support org of a cross-border e-commerce marketplace (25M MAU), processing 1,000+ daily tickets, and of the internal admin platform used by 20+ product teams.",
   },
   {
     company: "BI.ZONE",
     dates: "May 2020 — Sep 2021",
-    role: "Software Engineer",
+    role: "Frontend Engineer",
     description:
       "Frontend of defensive-security products: the UI of an incident-monitoring system, and an incident-remediation documentation portal I built and ran end to end — security analysts authored the content.",
   },
