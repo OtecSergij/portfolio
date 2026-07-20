@@ -30,7 +30,16 @@ const personJsonLd = {
   "@type": "Person",
   name: site.name,
   jobTitle: site.role,
+  description: site.tagline,
   url: site.siteUrl,
+  knowsAbout: [
+    "TypeScript",
+    "Node.js",
+    "React",
+    "Next.js",
+    "PostgreSQL",
+    "LLM application engineering",
+  ],
   sameAs: [site.contacts.github, site.contacts.linkedin].filter(
     (profile) => profile !== null,
   ),

@@ -19,5 +19,10 @@ export function caseMetadata(study: CaseStudy, facts: ProjectFacts): Metadata {
       title: `${study.title} — ${site.name}`,
       description,
     },
+    twitter: {
+      card: "summary_large_image",
+      title: `${study.title} — ${site.name}`,
+      description,
+    },
   };
 }
