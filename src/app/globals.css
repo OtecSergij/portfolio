@@ -1,0 +1,225 @@
+@import "tailwindcss";
+
+:root {
+  --bg-void: #07080a;
+  --bg-plate: #0d0f12;
+  --bg-plate-2: #121418;
+  --bg-plate-3: #191c22;
+  --bg-plate-4: #22262e;
+  --bg-rivet: #2b2f38;
+  --bg-photo-well: radial-gradient(
+    120% 120% at 30% 25%,
+    #2c3038 0%,
+    #1a1d23 55%,
+    #0f1116 100%
+  );
+
+  --rule-1: rgba(255, 255, 255, 0.06);
+  --rule-2: rgba(255, 255, 255, 0.09);
+  --rule-3: rgba(255, 255, 255, 0.14);
+  --rule-inset: rgba(0, 0, 0, 0.55);
+  --rule-highlight: rgba(255, 255, 255, 0.055);
+
+  --fg: #eceef2;
+  --fg-mute: #a6acb8;
+  --fg-dim: #7d8493;
+  --fg-faint: #474c56;
+
+  --ok: #5fb07a;
+  --ok-deep: #3d7a56;
+  --warn: #e39a3a;
+  --warn-deep: #9d6621;
+  --alert: #d4593b;
+  --alert-deep: #8a3220;
+  --cold: #6b8eaa;
+  --cold-deep: #3d556d;
+  --gold: #b99563;
+  --gold-deep: #7a6236;
+
+  --font-sans:
+    var(--font-inter-tight), "Inter", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, system-ui, sans-serif;
+  --font-disp:
+    var(--font-oswald), "Barlow Condensed", var(--font-inter-tight), sans-serif;
+  --font-mono:
+    var(--font-jetbrains-mono), "IBM Plex Mono", ui-monospace, SFMono-Regular,
+    Menlo, monospace;
+
+  --r-1: 2px;
+  --r-2: 4px;
+  --r-3: 6px;
+  --r-4: 10px;
+  --r-5: 14px;
+
+  --shadow-plate:
+    inset 0 1px 0 var(--rule-highlight), inset 0 -1px 0 var(--rule-inset),
+    0 1px 0 rgba(0, 0, 0, 0.6), 0 8px 22px rgba(0, 0, 0, 0.45);
+
+  --shadow-tile:
+    inset 0 1px 0 var(--rule-highlight), inset 0 -1px 0 rgba(0, 0, 0, 0.7),
+    0 1px 2px rgba(0, 0, 0, 0.55);
+
+  --shadow-btn:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12), inset 0 -2px 0 rgba(0, 0, 0, 0.55),
+    0 2px 0 rgba(0, 0, 0, 0.75), 0 4px 10px rgba(0, 0, 0, 0.45);
+
+  --shadow-btn-press:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05), inset 0 -1px 0 rgba(0, 0, 0, 0.35),
+    0 1px 0 rgba(0, 0, 0, 0.6);
+
+  --shadow-inset:
+    inset 0 2px 4px rgba(0, 0, 0, 0.65),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.03);
+
+  --glow-gold: 0 0 6px color-mix(in srgb, var(--gold) 55%, transparent);
+  --glow-gold-soft: 0 0 8px color-mix(in srgb, var(--gold) 35%, transparent);
+
+  --shiki-foreground: var(--fg);
+  --shiki-background: transparent;
+  --shiki-token-keyword: var(--gold);
+  --shiki-token-string: var(--ok);
+  --shiki-token-comment: var(--fg-dim);
+  --shiki-token-constant: var(--cold);
+  --shiki-token-function: var(--cold);
+}
+
+@theme inline {
+  --color-*: initial;
+  --font-*: initial;
+  --shadow-*: initial;
+  --radius-*: initial;
+
+  --color-void: var(--bg-void);
+  --color-plate: var(--bg-plate);
+  --color-plate-2: var(--bg-plate-2);
+  --color-plate-3: var(--bg-plate-3);
+  --color-plate-4: var(--bg-plate-4);
+  --color-rivet: var(--bg-rivet);
+
+  --color-rule-1: var(--rule-1);
+  --color-rule-2: var(--rule-2);
+  --color-rule-3: var(--rule-3);
+  --color-rule-inset: var(--rule-inset);
+  --color-rule-highlight: var(--rule-highlight);
+
+  --color-fg: var(--fg);
+  --color-fg-mute: var(--fg-mute);
+  --color-fg-dim: var(--fg-dim);
+  --color-fg-faint: var(--fg-faint);
+
+  --color-ok: var(--ok);
+  --color-ok-deep: var(--ok-deep);
+  --color-warn: var(--warn);
+  --color-warn-deep: var(--warn-deep);
+  --color-alert: var(--alert);
+  --color-alert-deep: var(--alert-deep);
+  --color-cold: var(--cold);
+  --color-cold-deep: var(--cold-deep);
+  --color-gold: var(--gold);
+  --color-gold-deep: var(--gold-deep);
+
+  --font-sans: var(--font-sans);
+  --font-disp: var(--font-disp);
+  --font-mono: var(--font-mono);
+
+  --radius-1: var(--r-1);
+  --radius-2: var(--r-2);
+  --radius-3: var(--r-3);
+  --radius-4: var(--r-4);
+  --radius-5: var(--r-5);
+
+  --shadow-plate: var(--shadow-plate);
+  --shadow-tile: var(--shadow-tile);
+  --shadow-btn: var(--shadow-btn);
+  --shadow-btn-press: var(--shadow-btn-press);
+  --shadow-inset: var(--shadow-inset);
+  --shadow-glow-gold: var(--glow-gold);
+  --shadow-glow-gold-soft: var(--glow-gold-soft);
+}
+
+@utility disp {
+  font-family: var(--font-disp);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  text-transform: uppercase;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    background: var(--bg-void);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.005em;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :focus-visible {
+    outline: 1px solid var(--gold);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .grit::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    mix-blend-mode: overlay;
+    opacity: 0.55;
+    border-radius: inherit;
+  }
+
+  .plate-brushed {
+    background:
+      repeating-linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.022) 0 1px,
+        transparent 1px 3px
+      ),
+      linear-gradient(180deg, #1d2026 0%, #16191e 100%);
+  }
+
+  .grid-bg-tight {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .led {
+    border-radius: 50%;
+    background: var(--led-color);
+    box-shadow:
+      0 0 6px color-mix(in srgb, var(--led-color) 60%, transparent),
+      0 0 0 1px color-mix(in srgb, var(--led-color) 25%, transparent);
+  }
+
+  .case-prose code:not(pre code) {
+    padding: 2px 7px;
+    background: var(--bg-plate-2);
+    border: 1px solid var(--rule-1);
+    border-radius: 3px;
+    color: var(--fg);
+    font-family: var(--font-mono);
+    font-size: 13px;
+  }
+
+  .case-prose strong {
+    font-weight: 600;
+    color: var(--fg);
+  }
+}
