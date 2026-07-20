@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { cn } from "@/lib/cn";
 import { Chip } from "@/components/ui/Chip";
 import { Plate } from "@/components/ui/Plate";
 import type { WorkProject } from "@/content/home";
+import { cn } from "@/lib/cn";
 import { externalLinkProps, type LinkAction } from "@/lib/links";
 
 const crosshairPositions = [

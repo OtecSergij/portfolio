@@ -1,7 +1,7 @@
-import { cn } from "@/lib/cn";
 import { Button } from "@/components/ui/Button";
 import { Plate } from "@/components/ui/Plate";
 import type { CaseCta, CaseCtaAction } from "@/content/cases/types";
+import { cn } from "@/lib/cn";
 import { externalLinkProps } from "@/lib/links";
 
 function ActionButton({ action }: { action: CaseCtaAction }) {
@@ -42,7 +42,7 @@ export function PostCta({
         className,
       )}
     >
-      <h2 className="disp mb-4 text-[clamp(30px,5vw,44px)] leading-none text-fg">
+      <h2 className="mb-4 disp text-[clamp(30px,5vw,44px)] leading-none text-fg">
         {cta.heading}
       </h2>
       <p className="mb-7 max-w-[560px] text-[17px] leading-[1.55] text-pretty text-fg-mute md:text-[18px]">

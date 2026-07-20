@@ -32,7 +32,7 @@ export function PostHero({
         ))}
       </div>
 
-      <h1 className="disp max-w-[900px] text-[clamp(48px,9vw,96px)] leading-[0.92] text-fg">
+      <h1 className="max-w-[900px] disp text-[clamp(48px,9vw,96px)] leading-[0.92] text-fg">
         {study.titleLines.map((line, index) => (
           <Fragment key={line}>
             {index > 0 && <br />}

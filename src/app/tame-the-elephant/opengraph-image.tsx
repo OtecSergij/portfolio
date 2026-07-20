@@ -1,6 +1,6 @@
 import { site } from "@/config/site";
-import { tameTheElephant } from "@/content/cases/tame-the-elephant";
 import { taglineText } from "@/content/cases/tagline";
+import { tameTheElephant } from "@/content/cases/tame-the-elephant";
 import { tameTheElephantFacts } from "@/content/projects";
 import { caseOgImageResponse, ogSize } from "@/lib/og/shared";
 

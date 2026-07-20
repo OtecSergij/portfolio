@@ -28,7 +28,7 @@ export default function NotFound() {
           className="w-full px-6 py-10 sm:px-10 sm:py-12 lg:px-16 lg:py-14"
         >
           <Pill led="alert">404 · No signal</Pill>
-          <h1 className="disp mt-7 text-[clamp(42px,7.5vw,84px)] leading-[0.95] text-fg">
+          <h1 className="mt-7 disp text-[clamp(42px,7.5vw,84px)] leading-[0.95] text-fg">
             Nothing at these coordinates
           </h1>
           <p className="mt-6 max-w-[540px] text-[17px] leading-[1.55] text-fg-mute">

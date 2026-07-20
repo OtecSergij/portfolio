@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { EmailButton } from "@/components/home/EmailButton";
 import { Hero } from "@/components/home/Hero";
 import { LinkedInButton } from "@/components/home/LinkedInButton";
 import { WorkCard } from "@/components/home/WorkCard";
@@ -7,7 +8,6 @@ import { Footer } from "@/components/layout/Footer";
 import { Section } from "@/components/layout/Section";
 import { Topbar } from "@/components/layout/Topbar";
 import { Button } from "@/components/ui/Button";
-import { EmailButton } from "@/components/home/EmailButton";
 import { site } from "@/config/site";
 import {
   aboutParagraphs,

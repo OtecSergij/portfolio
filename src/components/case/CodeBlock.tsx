@@ -29,7 +29,7 @@ export async function CodeBlock({
         <span className="text-fg-dim">{file}</span>
       </div>
       <div
-        className="relative after:pointer-events-none after:absolute after:inset-y-0 after:right-0 after:w-8 after:bg-linear-to-l after:from-plate-2 after:to-transparent [&>pre]:m-0 [&>pre]:overflow-x-auto [&>pre]:pl-5 [&>pre]:pr-8 [&>pre]:py-[22px] [&>pre]:font-mono [&>pre]:text-[13px] [&>pre]:leading-[1.65] [&>pre]:whitespace-pre md:[&>pre]:pl-6 [&>pre::-webkit-scrollbar]:h-1.5 [&>pre::-webkit-scrollbar-track]:bg-transparent [&>pre::-webkit-scrollbar-thumb]:rounded-full [&>pre::-webkit-scrollbar-thumb]:bg-rule-3"
+        className="relative after:pointer-events-none after:absolute after:inset-y-0 after:right-0 after:w-8 after:bg-linear-to-l after:from-plate-2 after:to-transparent [&>pre]:m-0 [&>pre]:overflow-x-auto [&>pre]:py-[22px] [&>pre]:pr-8 [&>pre]:pl-5 [&>pre]:font-mono [&>pre]:text-[13px] [&>pre]:leading-[1.65] [&>pre]:whitespace-pre md:[&>pre]:pl-6 [&>pre::-webkit-scrollbar]:h-1.5 [&>pre::-webkit-scrollbar-thumb]:rounded-full [&>pre::-webkit-scrollbar-thumb]:bg-rule-3 [&>pre::-webkit-scrollbar-track]:bg-transparent"
         dangerouslySetInnerHTML={{ __html: html }}
       />
     </div>

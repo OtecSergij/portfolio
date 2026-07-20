@@ -3,13 +3,13 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-import { cn } from "@/lib/cn";
-import { navItems } from "@/config/site";
-import { useScrollSpy } from "@/hooks/useScrollSpy";
 import { Brand } from "@/components/layout/Brand";
 import { Button } from "@/components/ui/Button";
 import { Led } from "@/components/ui/Led";
 import { Plate } from "@/components/ui/Plate";
+import { navItems } from "@/config/site";
+import { useScrollSpy } from "@/hooks/useScrollSpy";
+import { cn } from "@/lib/cn";
 
 const sectionIds = [...navItems.map((item) => item.id), "contact"];
 

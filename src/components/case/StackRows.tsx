@@ -1,5 +1,5 @@
-import { cn } from "@/lib/cn";
 import type { CaseStackRow } from "@/content/cases/types";
+import { cn } from "@/lib/cn";
 
 export function StackRows({
   rows,

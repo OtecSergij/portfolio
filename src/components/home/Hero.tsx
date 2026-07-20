@@ -1,6 +1,6 @@
+import { EmailButton } from "@/components/home/EmailButton";
 import { LinkedInButton } from "@/components/home/LinkedInButton";
 import { Button } from "@/components/ui/Button";
-import { EmailButton } from "@/components/home/EmailButton";
 import { Pill } from "@/components/ui/Pill";
 import { Plate } from "@/components/ui/Plate";
 import { Typewriter } from "@/components/ui/Typewriter";

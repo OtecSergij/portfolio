@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
-import { cn } from "@/lib/cn";
 import { Led, type LedTone } from "@/components/ui/Led";
+import { cn } from "@/lib/cn";
 
 export type ChipProps = {
   led?: LedTone;

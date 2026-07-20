@@ -2,9 +2,9 @@
 
 import type { ReactNode } from "react";
 
-import { cn } from "@/lib/cn";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { useRevealFade } from "@/hooks/useReveal";
+import { cn } from "@/lib/cn";
 
 export type SectionProps = {
   id: string;

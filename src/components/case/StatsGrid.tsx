@@ -1,5 +1,5 @@
-import { cn } from "@/lib/cn";
 import type { CaseStatItem } from "@/content/cases/types";
+import { cn } from "@/lib/cn";
 
 const smSpan: Partial<Record<number, string>> = { 2: "sm:col-span-2" };
 const lgSpan: Partial<Record<number, string>> = {

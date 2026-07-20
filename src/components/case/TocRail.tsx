@@ -2,8 +2,8 @@
 
 import { useMemo } from "react";
 
-import { cn } from "@/lib/cn";
 import { useScrollSpy } from "@/hooks/useScrollSpy";
+import { cn } from "@/lib/cn";
 
 export type TocItem = { id: string; label: string };
 

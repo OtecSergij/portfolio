@@ -1,4 +1,3 @@
-import { Footer } from "@/components/layout/Footer";
 import { CaseBlocks } from "@/components/case/CaseBlocks";
 import { CaseSection } from "@/components/case/CaseSection";
 import { CaseTopbar } from "@/components/case/CaseTopbar";
@@ -7,6 +6,7 @@ import { caseGridClass } from "@/components/case/grid";
 import { PostCta } from "@/components/case/PostCta";
 import { PostHero } from "@/components/case/PostHero";
 import { TocRail } from "@/components/case/TocRail";
+import { Footer } from "@/components/layout/Footer";
 import type { CaseStudy } from "@/content/cases/types";
 import { cn } from "@/lib/cn";
 import { pageClass } from "@/lib/layout";
@@ -34,7 +34,7 @@ export function CasePage({ study }: { study: CaseStudy }) {
               <aside className="mb-12 lg:sticky lg:top-9 lg:mb-0 lg:self-start">
                 <TocRail items={tocItems} />
               </aside>
-              <div className="case-prose min-w-0 [&_code:not(pre_code)]:px-[5px] [&_code:not(pre_code)]:-mr-0.5">
+              <div className="case-prose min-w-0 [&_code:not(pre_code)]:-mr-0.5 [&_code:not(pre_code)]:px-[5px]">
                 {study.sections.map((section) => (
                   <CaseSection
                     key={section.id}

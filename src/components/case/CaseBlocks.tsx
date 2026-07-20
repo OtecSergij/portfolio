@@ -1,6 +1,5 @@
 import type { ReactElement } from "react";
 
-import { cn } from "@/lib/cn";
 import { CodeBlock } from "@/components/case/CodeBlock";
 import { Figure } from "@/components/case/Figure";
 import {
@@ -11,6 +10,7 @@ import { PullQuote } from "@/components/case/PullQuote";
 import { StackRows } from "@/components/case/StackRows";
 import { StatsGrid } from "@/components/case/StatsGrid";
 import type { CaseBlock } from "@/content/cases/types";
+import { cn } from "@/lib/cn";
 
 const proseWidth = "max-w-[720px]";
 const bodyWidth = "max-w-[620px]";
@@ -78,7 +78,7 @@ function Block({ block }: { block: CaseBlock }): ReactElement {
         <h3
           className={cn(
             proseWidth,
-            "disp mt-12 mb-4 text-[20px] leading-[1.15] text-fg md:text-[22px]",
+            "mt-12 mb-4 disp text-[20px] leading-[1.15] text-fg md:text-[22px]",
           )}
         >
           {block.title}

@@ -1,5 +1,5 @@
-import { site } from "@/config/site";
 import { Year } from "@/components/layout/Year";
+import { site } from "@/config/site";
 
 export function Footer() {
   return (

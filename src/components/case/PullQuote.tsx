@@ -18,7 +18,7 @@ export function PullQuote({ quote, attribution, className }: PullQuoteProps) {
         aria-hidden
         className="absolute -top-px left-0 h-0.5 w-14 bg-gold shadow-glow-gold-soft"
       />
-      <blockquote className="disp max-w-[800px] text-[clamp(24px,3.4vw,36px)] leading-[1.15] text-balance text-fg">
+      <blockquote className="max-w-[800px] disp text-[clamp(24px,3.4vw,36px)] leading-[1.15] text-balance text-fg">
         {quote}
       </blockquote>
       {attribution !== undefined && (

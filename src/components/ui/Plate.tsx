@@ -25,11 +25,11 @@ export function Plate({
         "relative",
         variant === "plate"
           ? "rounded-5 shadow-plate"
-          : "rounded-4 shadow-tile overflow-hidden",
+          : "overflow-hidden rounded-4 shadow-tile",
         brushed ? "plate-brushed" : "bg-plate-3",
         grit && "grit overflow-hidden [&>*]:relative [&>*]:z-[1]",
         interactive &&
-          "transition-[transform,box-shadow] duration-200 ease-[ease] motion-safe:hover:-translate-y-[3px] hover:shadow-plate",
+          "transition-[transform,box-shadow] duration-200 ease-[ease] hover:shadow-plate motion-safe:hover:-translate-y-[3px]",
         className,
       )}
     >
