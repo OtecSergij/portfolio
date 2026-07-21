@@ -143,9 +143,9 @@ export const stackRows: readonly StackRow[] = [
       "Caching, rate limiting (sliding window / token bucket), session state.",
   },
   {
-    name: "Testing",
+    name: "Testcontainers",
     description:
-      "Integration tests over real, containerized infrastructure — the app runs in CI against migrated Postgres and MySQL, with concurrency tests that verify advisory locks hold under parallel load.",
+      "Integration tests on real containerized infrastructure, not mocks: the app in CI against freshly migrated DB, plus concurrency tests that verify advisory locks hold under parallel load.",
   },
   {
     name: "Vercel AI SDK",
