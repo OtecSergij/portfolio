@@ -33,7 +33,7 @@ export const aiPrReviewerFacts = {
   demoUrl: "https://reviewer.zablotsky.dev",
   sourceUrl: "https://github.com/OtecSergij/ai-pr-reviewer",
   caseRoute: "/ai-pr-reviewer",
-  updatedAt: "2026-07-14",
+  updatedAt: "2026-07-21",
 } as const satisfies ProjectFacts;
 
 export const tameTheElephantFacts = {
@@ -48,5 +48,5 @@ export const tameTheElephantFacts = {
   demoUrl: "https://tame.day",
   sourceUrl: null,
   caseRoute: "/tame-the-elephant",
-  updatedAt: "2026-07-14",
+  updatedAt: "2026-07-21",
 } as const satisfies ProjectFacts;

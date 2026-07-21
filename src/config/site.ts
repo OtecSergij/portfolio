@@ -22,7 +22,7 @@ export const site: SiteConfig = {
     "Shipping AI features into B2B SaaS — production systems where the model is one component of a larger product.",
   siteUrl: "https://zablotsky.dev",
   repoUrl: "https://github.com/OtecSergij/portfolio",
-  updatedAt: "2026-07-14",
+  updatedAt: "2026-07-21",
   contacts: {
     email: { user: "zablotskydev", domain: "gmail.com" },
     telegram: "otec_sergij",
