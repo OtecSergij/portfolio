@@ -13,10 +13,10 @@ export function PostHero({
     <header className="pt-10 pb-12 md:pt-12 md:pb-14">
       <p className="mb-7 font-mono text-[11px] tracking-[0.18em] text-fg-dim uppercase">
         <Link
-          href="/#work"
+          href="/#projects"
           className="text-fg-mute underline decoration-rule-3 underline-offset-4 transition-colors duration-150 hover:text-gold hover:decoration-gold"
         >
-          Work
+          Projects
         </Link>
         <span aria-hidden className="mx-2 text-fg-faint">
           /

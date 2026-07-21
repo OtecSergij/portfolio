@@ -69,10 +69,10 @@ export default function Home() {
                   <p
                     key={index}
                     className={cn(
-                      "mb-6.5 text-pretty last:mb-0",
+                      "mb-6.5 text-pretty text-fg last:mb-0",
                       paragraph.lead
-                        ? "text-[21px] leading-[1.5] text-fg md:text-[23px]"
-                        : "text-[19px] leading-[1.6] text-fg-mute md:text-[21px]",
+                        ? "text-[21px] leading-[1.5] md:text-[23px]"
+                        : "text-[19px] leading-[1.6] md:text-[21px]",
                     )}
                   >
                     {paragraph.body}
@@ -108,21 +108,6 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              {site.contacts.linkedin !== null && (
-                <div className="mt-7 flex justify-end">
-                  <a
-                    href={site.contacts.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2.5 border-b border-rule-3 pb-1 font-mono text-[12px] tracking-[0.12em] text-fg uppercase no-underline transition-colors duration-150 hover:border-gold"
-                  >
-                    Full resume on LinkedIn{" "}
-                    <span aria-hidden className="text-gold">
-                      →
-                    </span>
-                  </a>
-                </div>
-              )}
             </Section>
 
             <Section id="stack" title="Stack">
@@ -149,7 +134,12 @@ export default function Home() {
               </div>
             </Section>
 
-            <Section id="work" title="Work" align="right" meta={workMeta}>
+            <Section
+              id="projects"
+              title="Projects"
+              align="right"
+              meta={workMeta}
+            >
               <div className="grid grid-cols-1 gap-7 lg:grid-cols-2">
                 {workProjects.map((project) => (
                   <WorkCard key={project.title} project={project} />

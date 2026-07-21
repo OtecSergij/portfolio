@@ -31,7 +31,7 @@ export const tameTheElephant: CaseStudy = {
     " — with the economy underneath engineered like a small bank.",
   ],
   meta: [
-    { k: "Role", v: "Solo · Product + Design + Fullstack + Ops" },
+    { k: "Role", v: "Solo · Product + Design + Full-stack + Ops" },
     { k: "Timeline", v: "Aug 2025 — present · alongside a full-time job" },
     { k: "Status", v: tameTheElephantFacts.status.label },
     { k: "Stack", v: "React 18 · Express · Prisma · PostgreSQL" },

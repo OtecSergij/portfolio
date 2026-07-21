@@ -17,9 +17,9 @@ export type SiteConfig = {
 
 export const site: SiteConfig = {
   name: "Dmitrii Zablotskii",
-  role: "Senior Fullstack Engineer",
+  role: "Senior Full-stack Engineer",
   tagline:
-    "Shipping AI features into B2B SaaS — production systems where the model is one component of a larger product.",
+    "6 years of production TypeScript across Node and React. Now shipping AI features into B2B SaaS — systems where the model is one component, not the whole product.",
   siteUrl: "https://zablotsky.dev",
   repoUrl: "https://github.com/OtecSergij/portfolio",
   updatedAt: "2026-07-21",
@@ -27,7 +27,7 @@ export const site: SiteConfig = {
     email: { user: "zablotskydev", domain: "gmail.com" },
     telegram: "otec_sergij",
     github: "https://github.com/OtecSergij",
-    linkedin: null,
+    linkedin: process.env.NEXT_PUBLIC_LINKEDIN_URL ?? null,
   },
 };
 
@@ -45,5 +45,5 @@ export const navItems: readonly NavItem[] = [
   { id: "about", label: "About" },
   { id: "experience", label: "Experience" },
   { id: "stack", label: "Stack" },
-  { id: "work", label: "Work" },
+  { id: "projects", label: "Projects" },
 ];

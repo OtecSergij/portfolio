@@ -20,7 +20,7 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
 });
 
-const description = `Personal site of ${site.name}, a ${site.role.toLowerCase()}. ${site.tagline}`;
+const description = site.tagline;
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.siteUrl),

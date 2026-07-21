@@ -8,11 +8,10 @@ export type HeroPill = Required<StatusChip>;
 
 export const heroPills: readonly HeroPill[] = [
   { led: "ok", label: "Available" },
-  { led: "gold", label: "Remote · Contract & full-time" },
 ];
 
 export const heroRoleLine =
-  "Senior Fullstack Engineer · TS · Node · Next.js · LLM";
+  "Senior Full-stack Engineer · TS · Node · Next.js · LLM";
 
 export const heroLocationNote: ReactNode = (
   <>
@@ -27,18 +26,16 @@ export const aboutParagraphs: readonly AboutParagraph[] = [
     lead: true,
     body: (
       <>
-        {
-          "I'm a senior fullstack engineer with six years of production work, frontend-first: security tooling at "
-        }
+        {"Frontend-first, then full-stack: security tooling at "}
         <strong className="font-semibold text-fg">BI.ZONE</strong>
-        {", internal platforms for an EU marketplace at "}
+        {", internal platforms at "}
         <strong className="font-semibold text-fg">Joom</strong>
-        {", an enterprise DevOps product at "}
+        {", release tooling at "}
         <strong className="font-semibold text-fg">Innotech</strong>
-        {" — then fullstack at "}
+        {" — and "}
         <strong className="font-semibold text-fg">Yandex</strong>
         {
-          ", where I own marketing and SEO infrastructure across Auto.ru, Realty and Travel."
+          ", where I own marketing and SEO infrastructure across its Auto.ru, Realty and Travel verticals."
         }
       </>
     ),
@@ -46,16 +43,20 @@ export const aboutParagraphs: readonly AboutParagraph[] = [
   {
     body: (
       <>
-        {"That now includes "}
-        <span className="text-gold">LLM systems in production</span>
         {
-          ": a news-triage pipeline I built for the Auto.ru newsroom, and two live products of my own. The model is rarely the interesting part; the system around it is — the retry-and-fallback chain, the rate limiter, the cost per request, the UI that lets a non-technical user trust the output."
+          "That work now includes LLM systems in production: a news-triage pipeline I built for the Auto.ru newsroom, and two live products of my own. "
+        }
+        <span className="text-gold">
+          The model is rarely the interesting part; the system around it is
+        </span>
+        {
+          " — the retry-and-fallback chain, the rate limiter, the per-request cost accounting, the UI that lets a non-technical user trust the output."
         }
       </>
     ),
   },
   {
-    body: "The two projects below are the proof. I own every layer of both — product decisions, code, and the VPS they run on. Try them live.",
+    body: "The two products below are the proof. I own every layer of both — product decisions, code, and the VPS they run on. Try them live.",
   },
 ];
 
@@ -72,30 +73,30 @@ export const experienceRows: readonly ExperienceRow[] = [
   {
     company: "Yandex",
     dates: "Aug 2024 — Present",
-    role: "Senior Fullstack Engineer",
+    role: "Senior Full-stack Engineer",
     description:
-      "Own the marketing and SEO infrastructure behind Auto.ru, Realty and Travel — an ad-feed platform serving ~250k live offers, SEO tooling, and the editorial backend behind ten Yandex media products. Shipped two products solo, requirements to production: a publication-planning calendar (Yandex Tracker API) that replaced Asana for the main editorial teams, and an LLM news-triage pipeline now in production for the Auto.ru newsroom. Mentored an intern through to a full-time offer.",
+      "Own the marketing and SEO infrastructure across Auto.ru, Realty and Travel — an ad-feed platform serving ~250k live offers, SEO tooling, and the editorial backend for 10 Yandex media products. Shipped two products solo, from requirements to production: a publication-planning calendar (Yandex Tracker API) that replaced Asana for the main editorial teams, and an LLM news-triage pipeline (relevance and urgency classification) now in production for the Auto.ru newsroom. Mentored an intern through to a full-time offer.",
   },
   {
     company: "Innotech",
     dates: "May 2023 — Jul 2024",
     role: "Senior Frontend Engineer",
     description:
-      "Frontend, Sfera.Releases — the release-management module of an enterprise DevOps platform that scaled to ~20,000 daily users at a top-2 Russian bank. On the team from the product's 2023 launch: built the release-lifecycle UI and the frontend for Netflix Conductor workflow orchestration — dozens of production workflows. Contributed to the platform's shared UI kit.",
+      "Sfera.Releases — the release-management module of an enterprise DevOps platform that scaled to ~20k daily users at a top-2 Russian bank. On the team from the 2023 launch: built the release-lifecycle UI and integrated Netflix Conductor workflow orchestration on the frontend from scratch — dozens of production workflows. Contributed to the platform's shared component library.",
   },
   {
     company: "Joom",
     dates: "Sep 2021 — Mar 2023",
     role: "Frontend Engineer",
     description:
-      "Frontend of an in-house ticketing system for the 300-person support org of a cross-border e-commerce marketplace (25M MAU), processing 1,000+ daily tickets, and of the internal admin platform used by 20+ product teams.",
+      "Built the frontend of an in-house ticketing system handling 1,000+ tickets a day for a 300-person support org, and of the internal admin platform used by 20+ product teams — at an EU cross-border e-commerce marketplace (25M MAU)",
   },
   {
     company: "BI.ZONE",
     dates: "May 2020 — Sep 2021",
     role: "Frontend Engineer",
     description:
-      "Frontend of defensive-security products: the UI of an incident-monitoring system, and an incident-remediation documentation portal I built and ran end to end — security analysts authored the content.",
+      "Shipped the UI for defensive-security products: an incident-monitoring system, and an incident-remediation documentation portal owned end to end — security analysts authored the content.",
   },
 ];
 
@@ -109,23 +110,22 @@ export const stackRows: readonly StackRow[] = [
   {
     name: "TypeScript",
     description:
-      "Primary language across frontend, backend, and infra. Six years of production type-system work.",
+      "Primary language across frontend, backend, and infrastructure. Strict mode, generics, type-level API design.",
+  },
+  {
+    name: "React",
+    description:
+      "Hooks, suspense, server components. Built and maintained internal design systems.",
+  },
+  {
+    name: "Next.js",
+    description:
+      "App Router, RSC, streaming UI. Powers the AI PR Reviewer and this site.",
   },
   {
     name: "Node.js",
     description:
       "Backend services, API design, integrations with external systems (Yandex Tracker, Webmaster, S3).",
-  },
-  {
-    name: "Next.js",
-    accent: "16",
-    description:
-      "App Router, RSC, streaming UI for AI chat. Production usage on the AI PR Reviewer and this site.",
-  },
-  {
-    name: "React",
-    description:
-      "Six years of production experience — hooks, suspense, server components, internal design systems.",
   },
   {
     name: "PostgreSQL",
@@ -138,19 +138,24 @@ export const stackRows: readonly StackRow[] = [
       "Type-safe SQL with full TS inference. Migration tooling, schema introspection.",
   },
   {
-    name: "Vercel AI SDK",
-    description:
-      "LLM integration: streaming, multi-step tool calling, structured output, provider fallback. Provider-agnostic abstractions.",
-  },
-  {
     name: "Redis",
     description:
       "Caching, rate limiting (sliding window / token bucket), session state.",
   },
   {
+    name: "Testing",
+    description:
+      "Integration tests over real, containerized infrastructure — the app runs in CI against migrated Postgres and MySQL, with concurrency tests that verify advisory locks hold under parallel load.",
+  },
+  {
+    name: "Vercel AI SDK",
+    description:
+      "LLM integration: streaming, multi-step tool calling, structured output, provider-agnostic fallback.",
+  },
+  {
     name: "Docker, CI/CD",
     description:
-      "Self-managed deployment: GitHub Actions, Docker, Coolify on a VPS — SSL, env management, SSE-friendly proxying.",
+      "Self-managed deployment: GitHub Actions, Coolify on a VPS — SSL, env management, SSE-friendly proxying.",
   },
 ];
 
