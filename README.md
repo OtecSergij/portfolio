@@ -1,8 +1,7 @@
 # zablotsky.dev
 
-Personal site of [Dmitrii Zablotskii](https://zablotsky.dev) — senior fullstack
-engineer. Dark-only "industrial HUD" design system: machined plates, tactile
-buttons, LED status indicators, drafting-grid backgrounds.
+Personal site of [Dmitry Zablotsky](https://zablotsky.dev) — senior fullstack
+engineer.
 
 Three static routes — the one-pager home plus two case studies
 (`/ai-pr-reviewer`, `/tame-the-elephant`) — with generated Open Graph images
@@ -21,7 +20,7 @@ Three static routes — the one-pager home plus two case studies
 
 ```bash
 npm install
-npm run dev        # http://localhost:3000
+npm run dev
 ```
 
 Checks:
@@ -30,7 +29,7 @@ Checks:
 npm run lint
 npm run typecheck
 npm run build
-npm run format     # prettier --write
+npm run format
 ```
 
 Node 24 (see `.nvmrc`).

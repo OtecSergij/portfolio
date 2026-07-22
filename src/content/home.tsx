@@ -246,11 +246,7 @@ export const workProjects: readonly WorkProject[] = [
 export const contactBody: ReactNode = (
   <>
     {"Open to "}
-    <span className="text-gold">senior remote roles</span>
-    {" and "}
-    <span className="text-gold">contract work</span>
-    {
-      " with B2B SaaS teams shipping AI features. Remote-first, async-friendly, EU-aligned hours — and open to EU relocation."
-    }
+    <span className="text-gold">senior roles</span>
+    {" and contract work — remote or on-site in the EU, async-friendly."}
   </>
 );
