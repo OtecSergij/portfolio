@@ -455,11 +455,17 @@ export const tameTheElephant: CaseStudy = {
     body: "Tame the Elephant is in open beta at tame.day — sign up with an email or via Google/GitHub. The UI ships in English and Russian, installs to a home screen, and works offline. The source is private, so the demo is the artifact: everything claimed on this page is observable in the product, and I'm happy to walk through the code behind any section in a call.",
     actions: [
       {
-        label: "Try the demo",
+        label: "Try it live",
         href: tameTheElephantFacts.demoUrl,
         external: true,
         arrow: "→",
         variant: "solid",
+      },
+      {
+        label: "Try the demo (no signup)",
+        href: `${tameTheElephantFacts.demoUrl}/demo`,
+        external: true,
+        arrow: "→",
       },
       { label: "Back to home", href: "/", arrow: "←" },
     ],
