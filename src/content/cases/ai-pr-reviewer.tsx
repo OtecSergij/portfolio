@@ -428,12 +428,12 @@ export const aiPrReviewer: CaseStudy = {
                 "Strict, end to end: agent orchestration, API, and UI in one language.",
             },
             {
-              name: "Next.js 16",
+              name: "Next.js",
               description:
                 "App Router; a thin route handler streams the review over SSE.",
             },
             {
-              name: "Vercel AI SDK v6",
+              name: "Vercel AI SDK",
               description: (
                 <>
                   {"Multi-step "}

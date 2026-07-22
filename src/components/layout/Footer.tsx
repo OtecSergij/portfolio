@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="mt-14 flex flex-col gap-4 border-t border-rule-2 pt-10 pb-12 font-mono text-[11px] tracking-[0.18em] text-fg-dim uppercase sm:mt-20 sm:flex-row sm:items-center sm:justify-between sm:pt-14 sm:pb-16">
       <div>
-        © <Year /> {site.name} · Built with Next.js
+        © <Year /> {site.name}
       </div>
       <div className="flex gap-5.5">
         <a

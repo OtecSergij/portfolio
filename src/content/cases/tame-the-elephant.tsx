@@ -34,7 +34,7 @@ export const tameTheElephant: CaseStudy = {
     { k: "Role", v: "Solo · Product + Design + Full-stack + Ops" },
     { k: "Timeline", v: "Aug 2025 — present · alongside a full-time job" },
     { k: "Status", v: tameTheElephantFacts.status.label },
-    { k: "Stack", v: "React 18 · Express · Prisma · PostgreSQL" },
+    { k: "Stack", v: "React · Express · Prisma · PostgreSQL" },
   ],
   heroFigureCaption:
     "Fig 01 · Home dashboard in the dark instrument-panel design — balance counter, today's habit and challenge cards, points-dynamics chart",
@@ -127,7 +127,7 @@ export const tameTheElephant: CaseStudy = {
       blocks: [
         {
           type: "paragraph",
-          body: "What's live today: an installable PWA — React 18 + Vite, offline-precached, in English and Russian — against an Express + Prisma + PostgreSQL API. Sign-up is email+password or Google/GitHub. Home is a dashboard: balance, today's habits and challenges, a points-dynamics chart. Every balance-moving action lands in an events feed that doubles as the ledger, aggregated into dense time buckets for the charts.",
+          body: "What's live today: an installable PWA — React + Vite, offline-precached, in English and Russian — against an Express + Prisma + PostgreSQL API. Sign-up is email+password or Google/GitHub. Home is a dashboard: balance, today's habits and challenges, a points-dynamics chart. Every balance-moving action lands in an events feed that doubles as the ledger, aggregated into dense time buckets for the charts.",
         },
         {
           type: "paragraph",
@@ -392,7 +392,7 @@ export const tameTheElephant: CaseStudy = {
           type: "stack",
           rows: [
             {
-              name: "React 18 + Vite",
+              name: "React + Vite",
               description: "The PWA frontend, TypeScript throughout.",
             },
             {
@@ -452,7 +452,7 @@ export const tameTheElephant: CaseStudy = {
   ],
   cta: {
     heading: "See it running",
-    body: "Tame the Elephant is in closed beta at tame.day — sign up with an email or via Google/GitHub. The UI ships in English and Russian, installs to a home screen, and works offline. The source is private, so the demo is the artifact: everything claimed on this page is observable in the product, and I'm happy to walk through the code behind any section in a call.",
+    body: "Tame the Elephant is in open beta at tame.day — sign up with an email or via Google/GitHub. The UI ships in English and Russian, installs to a home screen, and works offline. The source is private, so the demo is the artifact: everything claimed on this page is observable in the product, and I'm happy to walk through the code behind any section in a call.",
     actions: [
       {
         label: "Try the demo",
