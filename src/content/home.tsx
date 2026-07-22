@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 import { aiPrReviewerFacts, tameTheElephantFacts } from "@/content/projects";
 import type { LinkAction } from "@/lib/links";
-import type { StatusChip } from "@/lib/tones";
+import type { LedTone, StatusChip } from "@/lib/tones";
 
 export type HeroPill = Required<StatusChip>;
 
@@ -167,6 +167,7 @@ export type CardLinkRow = {
 export type WorkProject = {
   title: string;
   tagline: string;
+  accent: LedTone;
   media?: { src: string; alt: string; position?: string };
   statusChips: readonly StatusChip[];
   stackChips: readonly string[];
@@ -179,7 +180,8 @@ export const workProjects: readonly WorkProject[] = [
   {
     title: aiPrReviewerFacts.name,
     tagline:
-      "Paste a GitHub PR link — get a streaming, line-by-line AI review. Multi-step agent over Octokit, structured output, provider fallback, per-IP rate limiting.",
+      "Paste a GitHub PR link — get a streaming, line-by-line AI review. Multi-step agent built on Octokit, structured output, provider fallback, per-IP rate limiting.",
+    accent: aiPrReviewerFacts.accent,
     media: {
       src: "/screenshots/reviewer-complete.png",
       alt: "AI PR Reviewer: a completed review with severity summary and an issue pinned to a diff.",
@@ -214,6 +216,7 @@ export const workProjects: readonly WorkProject[] = [
     title: tameTheElephantFacts.name,
     tagline:
       "A discipline app grounded in the elephant-and-rider metaphor — points, challenges, milestones over months, not days.",
+    accent: tameTheElephantFacts.accent,
     media: {
       src: "/screenshots/tte-home.png",
       alt: "Tame the Elephant: the home dashboard with balance, habit and challenge cards, and rewards.",
@@ -224,17 +227,17 @@ export const workProjects: readonly WorkProject[] = [
     linkRows: [
       {
         action: {
-          label: "Try the demo",
+          label: "Try it live",
           href: tameTheElephantFacts.demoUrl,
           external: true,
         },
+        note: "demo account · no signup",
       },
       {
         action: {
           label: "Read the breakdown",
           href: tameTheElephantFacts.caseRoute,
         },
-        note: "~8 min",
       },
     ],
   },

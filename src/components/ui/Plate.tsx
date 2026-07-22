@@ -29,7 +29,7 @@ export function Plate({
         brushed ? "plate-brushed" : "bg-plate-3",
         grit && "grit overflow-hidden [&>*]:relative [&>*]:z-[1]",
         interactive &&
-          "transition-[transform,box-shadow] duration-200 ease-[ease] hover:shadow-plate motion-safe:hover:-translate-y-[3px]",
+          "transition-[box-shadow] duration-200 ease-[ease] hover:shadow-plate",
         className,
       )}
     >
