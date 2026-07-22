@@ -198,6 +198,28 @@ export const tameTheElephant: CaseStudy = {
           type: "paragraph",
           body: (
             <>
+              <strong>{"The demo is engineered, not faked."}</strong>
+              {
+                " The one-click recruiter demo — the first thing anyone clicks — is provisioned as exactly the three rows better-auth's sign-in reads, in a single transaction with no outbound mail. Its multi-week history is backdated with the live scoring math, every timestamp anchored at local noon so the check-ins survive the on-read auto-reset in any timezone. The starting balance is computed from the rows the seed writes and asserted against the ledger invariant — a bad seed fails loud instead of shipping numbers that don't add up. Throwaway users are TTL-reaped, and the demo email namespace is reserved so a real sign-up can never be swept."
+              }
+            </>
+          ),
+        },
+        {
+          type: "paragraph",
+          body: (
+            <>
+              <strong>{"Time is a product problem."}</strong>
+              {
+                " Every day-boundary — streak windows, warning states, auto-resets — is computed in the user's own timezone with DST-safe wall-clock math, so “today” stays correct from Honolulu to Auckland, including the twice-a-year 23- and 25-hour days."
+              }
+            </>
+          ),
+        },
+        {
+          type: "paragraph",
+          body: (
+            <>
               <strong>{"Codes-only error contract."}</strong>
               {
                 " The backend never sends user-facing text: every error is a stable code plus raw params, and the frontend owns all wording through i18next. The contract is enforced at the type level — a backend code with no catalog entry, or an orphaned catalog key no code emits, fails typecheck:"
@@ -230,7 +252,7 @@ export const tameTheElephant: CaseStudy = {
             <>
               <strong>{"Auth built like it matters."}</strong>
               {
-                " better-auth with DB-backed sessions in httpOnly cookies and Google/GitHub OAuth. Passwords go through Argon2id at OWASP parameters over an HMAC-SHA256 pepper, so a database dump alone isn't crackable; every new password is screened against Have I Been Pwned via the k-anonymity range API — only five characters of a hash ever leave the server. Destructive operations (change password, unlink a provider, delete the account) require a session younger than two hours. Account linking keeps "
+                " better-auth with DB-backed sessions in httpOnly cookies and Google/GitHub OAuth. Passwords go through Argon2id at OWASP parameters over an HMAC-SHA256 pepper, so a database dump alone isn't crackable; every new password is screened against Have I Been Pwned via the k-anonymity range API — only five characters of a hash ever leave the server. The login path does constant work whether or not the account exists — confirmed by reading the auth library's own sign-in handler, not bolted on — so timing can't reveal which emails are registered. Destructive operations (change password, unlink a provider, delete the account) require a session younger than two hours. Account linking keeps "
               }
               <code>trustedProviders</code>
               {
@@ -245,7 +267,7 @@ export const tameTheElephant: CaseStudy = {
             <>
               <strong>{"i18n as a build artifact."}</strong>
               {
-                " i18next with generated types: 10 namespaces, 542 keys in English and 570 in Russian (plural forms), extracted and type-checked by CI. Adding a UI string without both locales fails the build."
+                " i18next with types generated from the catalogs: 10 namespaces, English and Russian, extracted and type-checked in CI. Plurals follow CLDR rather than a naive singular/plural pair — English has two categories (one/other), Russian four (one/few/many/other), so 21 is singular-like in Russian but plural in English. The parity check compares plural categories, not key counts, and adding a UI string without both locales fails the build."
               }
             </>
           ),
@@ -256,7 +278,7 @@ export const tameTheElephant: CaseStudy = {
             <>
               <strong>{"PWA details nobody notices until they break."}</strong>
               {
-                " The Workbox precache is tuned by hand: woff2 only (every service-worker-capable browser supports it), the 20 generated iOS splash PNGs excluded from precache but served on demand, and a navigation-fallback denylist so OAuth callbacks and emailed verify links reach the server instead of being answered by the cached SPA shell. The splash set is regenerated locally and sha-gated in CI — its bytes depend on the host Chrome version, so regenerating on runners would produce phantom diffs."
+                " The Workbox precache is hand-tuned: a navigation-fallback denylist so OAuth callbacks and emailed verify links reach the server instead of the cached SPA shell, and iOS splash assets kept out of precache. The splash set is sha-gated in CI against its source SVG — the generated bytes depend on the host Chrome version, so the check gates on the deterministic input, not the nondeterministic output."
               }
             </>
           ),
@@ -275,7 +297,7 @@ export const tameTheElephant: CaseStudy = {
               {" (no unsafe-inline for scripts), HSTS, "}
               <code>{"frame-ancestors 'none'"}</code>
               {
-                ", a rate-limit zone keyed by the real client IP recovered from the proxy chain, and hidden sourcemaps that nginx additionally refuses to serve."
+                ", rate limiting in three coordinated layers (an nginx burst zone, better-auth's DB-backed limiter, an Express per-minute budget) each keyed by the real client IP recovered from the proxy chain, and hidden sourcemaps that nginx additionally refuses to serve."
               }
             </>
           ),
@@ -331,14 +353,6 @@ export const tameTheElephant: CaseStudy = {
               }
             </>,
             <>
-              <strong>
-                {"Streak-only writes stay outside the advisory lock."}
-              </strong>
-              {
-                " Habit auto-reset moves no points, so it doesn't need the serialization; keeping it out keeps the lock's scope minimal and auditable."
-              }
-            </>,
-            <>
               <strong>{"Soft email verification."}</strong>
               {
                 " Login is never blocked on an unverified address; a password reset proves mailbox ownership and doubles as verification. Deletion receipts go only to verified addresses — an unverified one may belong to a stranger."
@@ -367,8 +381,8 @@ export const tameTheElephant: CaseStudy = {
             },
             {
               k: "Tested for real",
-              v: "376 database tests",
-              note: "every points rule, streak bonus, and race condition runs against a real PostgreSQL on every change — not mocked",
+              v: "400+ database tests",
+              note: "every points rule, streak bonus, and race condition runs against a real PostgreSQL on every change — not mocked, with a dedicated parallel-request suite proving the economy can't double-spend",
             },
             {
               k: "A finished product",
