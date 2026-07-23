@@ -22,7 +22,7 @@ export const site: SiteConfig = {
     "6 years of production TypeScript across Node and React. Now shipping AI features into B2B SaaS — systems where the model is one component, not the whole product.",
   siteUrl: "https://zablotsky.dev",
   repoUrl: "https://github.com/OtecSergij/portfolio",
-  updatedAt: "2026-07-21",
+  updatedAt: "2026-07-22",
   contacts: {
     email: { user: "zablotskydev", domain: "gmail.com" },
     telegram: "otec_sergij",
