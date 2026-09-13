@@ -215,7 +215,7 @@ export const workProjects: readonly WorkProject[] = [
   {
     title: tameTheElephantFacts.name,
     tagline:
-      "A discipline app grounded in the elephant-and-rider metaphor — points, challenges, milestones over months, not days.",
+      "Habits earn points, temptations cost them — a self-discipline PWA. Once points can buy real rewards they're a currency, not a score, so I built the economy underneath like a bank.",
     accent: tameTheElephantFacts.accent,
     media: {
       src: "/screenshots/tte-home.png",
