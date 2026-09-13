@@ -34,3 +34,6 @@ next-env.d.ts
 
 # local claude code tooling config — never published
 .claude/
+
+# local oh-my-claudecode session state — never published
+.omc/
