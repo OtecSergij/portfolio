@@ -136,7 +136,15 @@ export function WorkCard({ project }: { project: WorkProject }) {
       >
         <div className="flex flex-1 flex-col px-6 pt-6 pb-6 sm:px-7.5 sm:pt-7">
           <h3 className="disp text-[34px] leading-[0.95] text-fg">
-            {project.title}
+            <Link
+              href={project.caseHref}
+              className={cn(
+                "no-underline transition-colors duration-150",
+                accentHover[accent],
+              )}
+            >
+              {project.title}
+            </Link>
           </h3>
           <p className="mt-3.5 max-w-[480px] text-[16px] leading-[1.5] text-fg-mute">
             {project.tagline}

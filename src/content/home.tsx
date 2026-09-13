@@ -166,6 +166,7 @@ export type CardLinkRow = {
 
 export type WorkProject = {
   title: string;
+  caseHref: string;
   tagline: string;
   accent: LedTone;
   media?: { src: string; alt: string; position?: string };
@@ -179,6 +180,7 @@ export const workMeta = "Featured · 02 active projects";
 export const workProjects: readonly WorkProject[] = [
   {
     title: aiPrReviewerFacts.name,
+    caseHref: aiPrReviewerFacts.caseRoute,
     tagline:
       "Paste a GitHub PR link — get a streaming, line-by-line AI review. Multi-step agent built on Octokit, structured output, provider fallback, per-IP rate limiting.",
     accent: aiPrReviewerFacts.accent,
@@ -214,6 +216,7 @@ export const workProjects: readonly WorkProject[] = [
   },
   {
     title: tameTheElephantFacts.name,
+    caseHref: tameTheElephantFacts.caseRoute,
     tagline:
       "Habits earn points, temptations cost them — a self-discipline PWA. Once points can buy real rewards they're a currency, not a score, so I built the economy underneath like a bank.",
     accent: tameTheElephantFacts.accent,
