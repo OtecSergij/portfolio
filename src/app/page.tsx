@@ -32,6 +32,7 @@ const personJsonLd = {
   jobTitle: site.role,
   description: site.tagline,
   url: site.siteUrl,
+  image: `${site.siteUrl}/dmitry-zablotsky.jpg`,
   knowsAbout: [
     "TypeScript",
     "Node.js",

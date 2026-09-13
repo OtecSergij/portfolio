@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { EmailButton } from "@/components/home/EmailButton";
 import { LinkedInButton } from "@/components/home/LinkedInButton";
 import { Button } from "@/components/ui/Button";
@@ -14,7 +16,7 @@ export function Hero() {
       grit
       className="px-6 py-9 sm:px-10 sm:py-11 lg:px-16 lg:py-14"
     >
-      <div className="grid items-center gap-12 lg:grid-cols-[1fr_300px] lg:gap-14">
+      <div className="grid items-center gap-12 min-[1101px]:grid-cols-[1fr_300px] min-[1101px]:gap-14">
         <div>
           <div className="mb-7 flex flex-wrap gap-2.5">
             {heroPills.map((pill) => (
@@ -46,18 +48,21 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative mx-auto h-[280px] w-[280px] lg:mr-0">
+        <div className="relative order-first mx-auto h-[280px] w-[280px] min-[1101px]:order-none min-[1101px]:mr-0">
           <div
             aria-hidden
             className="absolute -top-3 -right-3 bottom-7 left-7 rounded-full bg-[radial-gradient(circle_at_50%_50%,color-mix(in_srgb,var(--gold)_18%,transparent)_0%,transparent_70%)] blur-[2px]"
           />
-          <div className="relative h-64 w-64 overflow-hidden rounded-full bg-[image:var(--bg-photo-well)] shadow-[inset_0_1px_0_var(--rule-highlight),inset_0_-1px_0_var(--rule-inset),0_12px_28px_rgba(0,0,0,0.5)]">
-            <span
-              aria-hidden
-              className="absolute inset-0 grid place-items-center font-mono text-[10px] tracking-[0.4em] text-[color-mix(in_srgb,var(--fg)_25%,transparent)]"
-            >
-              PHOTO
-            </span>
+          <div className="relative mx-auto h-64 w-64 overflow-hidden rounded-full bg-[image:var(--bg-photo-well)] shadow-[inset_0_1px_0_var(--rule-highlight),inset_0_-1px_0_var(--rule-inset),0_12px_28px_rgba(0,0,0,0.5)] min-[1101px]:mx-0">
+            <Image
+              src="/dmitry-zablotsky.jpg"
+              alt={`Portrait of ${site.name}`}
+              width={256}
+              height={256}
+              sizes="256px"
+              priority
+              className="h-full w-full object-cover"
+            />
             <span
               aria-hidden
               className="absolute inset-0 bg-[repeating-linear-gradient(135deg,rgba(255,255,255,0.02)_0_1px,transparent_1px_6px)]"
