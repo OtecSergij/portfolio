@@ -15,6 +15,8 @@ export type SiteConfig = {
   contacts: Contacts;
 };
 
+const linkedinUrl = process.env.NEXT_PUBLIC_LINKEDIN_URL?.trim();
+
 export const site: SiteConfig = {
   name: "Dmitry Zablotsky",
   role: "Senior Full-stack Engineer",
@@ -27,7 +29,8 @@ export const site: SiteConfig = {
     email: { user: "zablotskydev", domain: "gmail.com" },
     telegram: "otec_sergij",
     github: "https://github.com/OtecSergij",
-    linkedin: process.env.NEXT_PUBLIC_LINKEDIN_URL ?? null,
+    linkedin:
+      linkedinUrl === undefined || linkedinUrl === "" ? null : linkedinUrl,
   },
 };
 
