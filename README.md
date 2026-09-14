@@ -1,6 +1,6 @@
 # zablotsky.dev
 
-Personal site of [Dmitry Zablotsky](https://zablotsky.dev) — senior fullstack
+Personal site of [Dmitry Zablotsky](https://zablotsky.dev) — senior full-stack
 engineer.
 
 Three static routes — the one-pager home plus two case studies

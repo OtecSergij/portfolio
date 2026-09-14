@@ -89,7 +89,7 @@ export const experienceRows: readonly ExperienceRow[] = [
     dates: "Sep 2021 — Mar 2023",
     role: "Frontend Engineer",
     description:
-      "Built the frontend of an in-house ticketing system handling 1,000+ tickets a day for a 300-person support org, and of the internal admin platform used by 20+ product teams — at an EU cross-border e-commerce marketplace (25M MAU)",
+      "Built the frontend of an in-house ticketing system handling 1,000+ tickets a day for a 300-person support org, and of the internal admin platform used by 20+ product teams — at an EU cross-border e-commerce marketplace (25M MAU).",
   },
   {
     company: "BI.ZONE",
@@ -115,7 +115,7 @@ export const stackRows: readonly StackRow[] = [
   {
     name: "React",
     description:
-      "Hooks, suspense, server components. Built and maintained internal design systems.",
+      "Hooks, Suspense, Server Components. Built and maintained internal design systems.",
   },
   {
     name: "Next.js",
@@ -145,7 +145,7 @@ export const stackRows: readonly StackRow[] = [
   {
     name: "Testcontainers",
     description:
-      "Integration tests on real containerized infrastructure, not mocks: the app in CI against freshly migrated DB, plus concurrency tests that verify advisory locks hold under parallel load.",
+      "Integration tests on real containerized infrastructure, not mocks: the app in CI against a freshly migrated DB, plus concurrency tests that verify advisory locks hold under parallel load.",
   },
   {
     name: "Vercel AI SDK",
@@ -186,7 +186,7 @@ export const workProjects: readonly WorkProject[] = [
     accent: aiPrReviewerFacts.accent,
     media: {
       src: "/screenshots/reviewer-complete.png",
-      alt: "AI PR Reviewer: a completed review with severity summary and an issue pinned to a diff.",
+      alt: "AI PR Reviewer: a completed review with a severity summary and an issue pinned to a diff.",
       position: "left top",
     },
     statusChips: aiPrReviewerFacts.badges,
@@ -218,7 +218,7 @@ export const workProjects: readonly WorkProject[] = [
     title: tameTheElephantFacts.name,
     caseHref: tameTheElephantFacts.caseRoute,
     tagline:
-      "Habits earn points, temptations cost them — a self-discipline PWA. Once points can buy real rewards they're a currency, not a score, so I built the economy underneath like a bank.",
+      "Habits earn points, temptations cost them — a self-discipline PWA. Once points can buy real rewards, they're a currency, not a score, so I built the economy underneath like a bank.",
     accent: tameTheElephantFacts.accent,
     media: {
       src: "/screenshots/tte-home.png",

@@ -193,7 +193,7 @@ export const aiPrReviewer: CaseStudy = {
             "Fig 02 · Issue cards streaming in while the agent console reports each tool call",
           image: {
             src: "/screenshots/reviewer-complete.png",
-            alt: "A completed review: severity summary, share link, and an issue card pinned to a diff slice.",
+            alt: "A completed review: a severity summary, a share link, and an issue card pinned to a diff slice.",
             position: "left top",
           },
         },
@@ -314,7 +314,7 @@ export const aiPrReviewer: CaseStudy = {
               {"Fixture mode for UI work — "}
               <code>MOCK_REVIEW</code>
               {
-                " streams the same chunk types as production, with six injectable failure scenarios; front-end iteration burns no tokens."
+                " streams the same chunk types as production, with six injectable failure scenarios; frontend iteration burns no tokens."
               }
             </>,
           ],

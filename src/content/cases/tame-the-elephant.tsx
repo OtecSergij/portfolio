@@ -127,7 +127,7 @@ export const tameTheElephant: CaseStudy = {
       blocks: [
         {
           type: "paragraph",
-          body: "What's live today: an installable PWA — React + Vite, offline-precached, in English and Russian — against an Express + Prisma + PostgreSQL API. Sign-up is email+password or Google/GitHub. Home is a dashboard: balance, today's habits and challenges, a points-dynamics chart. Every balance-moving action lands in an events feed that doubles as the ledger, aggregated into dense time buckets for the charts.",
+          body: "What's live today: an installable PWA — React + Vite, offline-precached, in English and Russian — against an Express + Prisma + PostgreSQL API. Signup is email+password or Google/GitHub. Home is a dashboard: balance, today's habits and challenges, a points-dynamics chart. Every balance-moving action lands in an events feed that doubles as the ledger, aggregated into dense time buckets for the charts.",
         },
         {
           type: "paragraph",
@@ -200,7 +200,7 @@ export const tameTheElephant: CaseStudy = {
             <>
               <strong>{"The demo is engineered, not faked."}</strong>
               {
-                " The one-click recruiter demo — the first thing anyone clicks — is provisioned as exactly the three rows better-auth's sign-in reads, in a single transaction with no outbound mail. Its multi-week history is backdated with the live scoring math, every timestamp anchored at local noon so the check-ins survive the on-read auto-reset in any timezone. The starting balance is computed from the rows the seed writes and asserted against the ledger invariant — a bad seed fails loud instead of shipping numbers that don't add up. Throwaway users are TTL-reaped, and the demo email namespace is reserved so a real sign-up can never be swept."
+                " The one-click recruiter demo — the first thing anyone clicks — is provisioned as exactly the three rows better-auth's sign-in reads, in a single transaction with no outbound mail. Its multi-week history is backdated with the live scoring math, every timestamp anchored at local noon so the check-ins survive the on-read auto-reset in any timezone. The starting balance is computed from the rows the seed writes and asserted against the ledger invariant — a bad seed fails loud instead of shipping numbers that don't add up. Throwaway users are TTL-reaped, and the demo email namespace is reserved so a real signup can never be swept."
               }
             </>
           ),
@@ -211,7 +211,7 @@ export const tameTheElephant: CaseStudy = {
             <>
               <strong>{"Time is a product problem."}</strong>
               {
-                " Every day-boundary — streak windows, warning states, auto-resets — is computed in the user's own timezone with DST-safe wall-clock math, so “today” stays correct from Honolulu to Auckland, including the twice-a-year 23- and 25-hour days."
+                " Every day boundary — streak windows, warning states, auto-resets — is computed in the user's own timezone with DST-safe wall-clock math, so “today” stays correct from Honolulu to Auckland, including the twice-a-year 23- and 25-hour days."
               }
             </>
           ),
@@ -349,7 +349,7 @@ export const tameTheElephant: CaseStudy = {
             <>
               <strong>{"HIBP screening fails open."}</strong>
               {
-                " A Have I Been Pwned outage must not block sign-ups, so the check degrades with a logged warning instead of an error. A conscious availability-over-strictness call."
+                " A Have I Been Pwned outage must not block signups, so the check degrades with a logged warning instead of an error. A conscious availability-over-strictness call."
               }
             </>,
             <>
