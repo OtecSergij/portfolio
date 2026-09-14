@@ -21,7 +21,7 @@ export const site: SiteConfig = {
   name: "Dmitry Zablotsky",
   role: "Senior Full-stack Engineer",
   tagline:
-    "6 years of production TypeScript across Node and React. Now shipping AI features into B2B SaaS — systems where the model is one component, not the whole product.",
+    "Six years of production TypeScript across React and Node. I ship whole products — UI, API, tests, deploy.",
   siteUrl: "https://zablotsky.dev",
   repoUrl: "https://github.com/OtecSergij/portfolio",
   updatedAt: "2026-09-13",

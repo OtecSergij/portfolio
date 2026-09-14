@@ -11,7 +11,7 @@ export const heroPills: readonly HeroPill[] = [
 ];
 
 export const heroRoleLine =
-  "Senior Full-stack Engineer · TS · Node · Next.js · LLM";
+  "Senior Full-stack Engineer · TypeScript · React · Node · LLM";
 
 export const heroLocationNote: ReactNode = (
   <>
@@ -26,17 +26,19 @@ export const aboutParagraphs: readonly AboutParagraph[] = [
     lead: true,
     body: (
       <>
-        {"Frontend-first, then full-stack: security tooling at "}
-        <strong className="font-semibold text-fg">BI.ZONE</strong>
-        {", internal platforms at "}
-        <strong className="font-semibold text-fg">Joom</strong>
-        {", release tooling at "}
-        <strong className="font-semibold text-fg">Innotech</strong>
-        {" — and "}
-        <strong className="font-semibold text-fg">Yandex</strong>
         {
-          ", where I own marketing and SEO infrastructure across its Auto.ru, Realty and Travel verticals."
+          "Frontend-first, then full-stack. Six years across security, e-commerce, enterprise DevOps and media: defensive-security UI at "
         }
+        <strong className="font-semibold text-fg">BI.ZONE</strong>
+        {", ticketing and admin platforms for a 25M-MAU marketplace at "}
+        <strong className="font-semibold text-fg">Joom</strong>
+        {", a release-management product at "}
+        <strong className="font-semibold text-fg">Innotech</strong>
+        {
+          " that a top-2 bank runs on — and now the marketing and SEO infrastructure behind "
+        }
+        <strong className="font-semibold text-fg">Yandex</strong>
+        {"'s Auto.ru, Realty and Travel."}
       </>
     ),
   },
@@ -44,19 +46,17 @@ export const aboutParagraphs: readonly AboutParagraph[] = [
     body: (
       <>
         {
-          "That work now includes LLM systems in production: a news-triage pipeline I built for the Auto.ru newsroom, and two live products of my own. "
+          "I usually lead a project end to end: a request comes in from the business, I estimate it, pin down the requirements with whoever asked, design the solution, break it into tasks and see it through to sign-off in production. The rest is the backlog, small feature requests from users, bug fixes and on-call: alerts, incident triage, fixes. "
         }
         <span className="text-gold">
-          The model is rarely the interesting part; the system around it is
+          Being on call for your own code is the strictest code review there is
         </span>
-        {
-          " — the retry-and-fallback chain, the rate limiter, the per-request cost accounting, the UI that lets a non-technical user trust the output."
-        }
+        {"."}
       </>
     ),
   },
   {
-    body: "The two products below are the proof. I own every layer of both — product decisions, code, and the VPS they run on. Try them live.",
+    body: "The two products below are full-stack, built and deployed solo, and running in public. Try them live.",
   },
 ];
 
