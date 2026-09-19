@@ -48,7 +48,7 @@ export const tameTheElephantFacts = {
     { label: "Installable PWA" },
   ],
   stackChips: ["React", "Express", "Prisma", "PostgreSQL"],
-  demoUrl: "https://tame.day",
+  demoUrl: "https://tame.day/demo",
   sourceUrl: null,
   caseRoute: "/tame-the-elephant",
   updatedAt: "2026-07-22",
