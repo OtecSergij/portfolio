@@ -52,7 +52,10 @@ export function Button(props: ButtonProps) {
   if (isAnchor(props)) {
     const { variant = "solid", size = "md", className, ...anchorProps } = props;
     const classes = buttonClasses(variant, size, className);
-    if (anchorProps.href.startsWith("/")) {
+    if (
+      anchorProps.href.startsWith("/") &&
+      anchorProps.download === undefined
+    ) {
       return <Link {...anchorProps} className={classes} />;
     }
     return <a {...anchorProps} className={classes} />;

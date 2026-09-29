@@ -1,21 +1,23 @@
 import type { ReactNode } from "react";
 
+import { site } from "@/config/site";
 import { aiPrReviewerFacts, tameTheElephantFacts } from "@/content/projects";
+import { resume } from "@/content/resume";
 import type { LinkAction } from "@/lib/links";
 import type { LedTone, StatusChip } from "@/lib/tones";
 
-export type HeroPill = Required<StatusChip>;
+export type HeroPill = StatusChip;
 
 export const heroPills: readonly HeroPill[] = [
-  { led: "ok", label: "Available" },
+  { led: "ok", label: "Open to senior roles" },
+  { label: "Remote · Relocation" },
 ];
 
-export const heroRoleLine =
-  "Senior Full-stack Engineer · TypeScript · React · Node · LLM";
+export const heroRoleLine = resume.headline.join("\u00a0· ");
 
 export const heroLocationNote: ReactNode = (
   <>
-    Belgrade · <span className="text-gold">CET</span>
+    {site.location} · <span className="text-gold">CET</span>
   </>
 );
 
@@ -27,18 +29,12 @@ export const aboutParagraphs: readonly AboutParagraph[] = [
     body: (
       <>
         {
-          "Frontend-first, then full-stack. Six years across security, e-commerce, enterprise DevOps and media: defensive-security UI at "
-        }
-        <strong className="font-semibold text-fg">BI.ZONE</strong>
-        {", ticketing and admin platforms for a 25M-MAU marketplace at "}
-        <strong className="font-semibold text-fg">Joom</strong>
-        {", a release-management product at "}
-        <strong className="font-semibold text-fg">Innotech</strong>
-        {
-          " that a top-2 bank runs on — and now the marketing and SEO infrastructure behind "
+          "I'm a full-stack TypeScript engineer with six years of production experience. I came up through frontend at a cybersecurity vendor, a 25M-MAU marketplace and an enterprise DevOps platform at a large bank, and since 2024 at "
         }
         <strong className="font-semibold text-fg">Yandex</strong>
-        {"'s Auto.ru, Realty and Travel."}
+        {
+          " I've taken projects from requirements to production: React UIs, Node.js services and batch pipelines, PostgreSQL, monitoring and on-call."
+        }
       </>
     ),
   },
@@ -46,7 +42,7 @@ export const aboutParagraphs: readonly AboutParagraph[] = [
     body: (
       <>
         {
-          "I usually lead a project end to end: a request comes in from the business, I estimate it, pin down the requirements with whoever asked, design the solution, break it into tasks and see it through to sign-off in production. The rest is the backlog, small feature requests from users, bug fixes and on-call: alerts, incident triage, fixes. "
+          "I usually run a project end to end: take the request from the business, estimate it, pin down the requirements with the stakeholder, write the design doc, build it and see it through to sign-off in production. Between projects I work the backlog and take on-call shifts: alerts, incident triage, root-cause fixes. "
         }
         <span className="text-gold">
           Being on call for your own code is the strictest code review there is
@@ -56,7 +52,7 @@ export const aboutParagraphs: readonly AboutParagraph[] = [
     ),
   },
   {
-    body: "The two products below are full-stack, built and deployed solo, and running in public. Try them live.",
+    body: "The two products below are mine end to end: designed, built, deployed and operated solo, and both are live. Try them.",
   },
 ];
 
@@ -64,41 +60,27 @@ export type ExperienceRow = {
   company: string;
   dates: string;
   role: string;
-  description: string;
+  descriptor: readonly string[];
+  bullets: readonly string[];
 };
 
-export const experienceMeta = "Selected roles · 2020 — 2026";
+const roleCount = String(resume.experience.length).padStart(2, "0");
 
-export const experienceRows: readonly ExperienceRow[] = [
-  {
-    company: "Yandex",
-    dates: "Aug 2024 — Present",
-    role: "Senior Full-stack Engineer",
-    description:
-      "Own the marketing and SEO infrastructure across Auto.ru, Realty and Travel — an ad-feed platform serving ~250k live offers, SEO tooling, and the editorial backend for 10 Yandex media products. Shipped two products solo, from requirements to production: a publication-planning calendar (Yandex Tracker API) that replaced Asana for the main editorial teams, and an LLM news-triage pipeline (relevance and urgency classification) now in production for the Auto.ru newsroom. Mentored an intern through to a full-time offer.",
-  },
-  {
-    company: "Innotech",
-    dates: "May 2023 — Jul 2024",
-    role: "Senior Frontend Engineer",
-    description:
-      "Sfera.Releases — the release-management module of an enterprise DevOps platform that scaled to ~20k daily users at a top-2 Russian bank. On the team from the 2023 launch: built the release-lifecycle UI and integrated Netflix Conductor workflow orchestration on the frontend from scratch — dozens of production workflows. Contributed to the platform's shared component library.",
-  },
-  {
-    company: "Joom",
-    dates: "Sep 2021 — Mar 2023",
-    role: "Frontend Engineer",
-    description:
-      "Built the frontend of an in-house ticketing system handling 1,000+ tickets a day for a 300-person support org, and of the internal admin platform used by 20+ product teams — at an EU cross-border e-commerce marketplace (25M MAU).",
-  },
-  {
-    company: "BI.ZONE",
-    dates: "May 2020 — Sep 2021",
-    role: "Frontend Engineer",
-    description:
-      "Shipped the UI for defensive-security products: an incident-monitoring system, and an incident-remediation documentation portal owned end to end — security analysts authored the content.",
-  },
-];
+const firstRoleYear = Math.min(
+  ...resume.experience.map(({ period }) => Number(period.start.slice(-4))),
+);
+
+export const experienceMeta = `${roleCount} roles · ${String(firstRoleYear)} — present`;
+
+export const experienceRows: readonly ExperienceRow[] = resume.experience.map(
+  ({ company, period, title, descriptor, bullets }) => ({
+    company,
+    dates: `${period.start} — ${period.end}`,
+    role: title,
+    descriptor,
+    bullets,
+  }),
+);
 
 export type StackRow = {
   name: string;
@@ -108,54 +90,29 @@ export type StackRow = {
 
 export const stackRows: readonly StackRow[] = [
   {
-    name: "TypeScript",
+    name: "TypeScript · React · Next.js",
     description:
-      "Primary language across frontend, backend, and infrastructure. Strict mode, generics, type-level API design.",
+      "Primary language front to back. Strict TypeScript, React with SSR at Auto.ru, Next.js App Router with RSC and streaming in the AI PR Reviewer and this site. A design system built from scratch on CSS Modules and design tokens in Tame the Elephant; reusable components for a shared UI library at Innotech.",
   },
   {
-    name: "React",
+    name: "Node.js · PostgreSQL · Redis",
     description:
-      "Hooks, Suspense, Server Components. Built and maintained internal design systems.",
+      "REST services, batch pipelines and integrations with the Yandex Tracker and Webmaster APIs and S3-compatible storage. PostgreSQL as the system of record: schema design and migrations with Prisma and Drizzle, a retry queue with exponential backoff, advisory-lock serialization and query timeouts under load; response caching for a hot API endpoint. Redis for per-IP sliding-window rate limiting in Lua.",
   },
   {
-    name: "Next.js",
+    name: "LLM integration",
     description:
-      "App Router, RSC, streaming UI. Powers the AI PR Reviewer and this site.",
+      "Two LLM pipelines in production at Yandex, news monitoring and ticket automation, and one public product: prompt calibration on a labeled evaluation set, model choice by cost and accuracy, multi-step tool calling, structured output, provider failover with transcript handoff on the Vercel AI SDK.",
   },
   {
-    name: "Node.js",
+    name: "Testing",
     description:
-      "Backend services, API design, integrations with external systems (Yandex Tracker, Webmaster, S3).",
+      "Integration tests with Testcontainers in the AI PR Reviewer (against a real PostgreSQL in CI) and in the planning calendar and the news-monitoring service at Yandex; 400+ integration tests with a race suite in Tame the Elephant; a before-and-after load test when adding a cache to a Yandex API endpoint.",
   },
   {
-    name: "PostgreSQL",
+    name: "Delivery and operations",
     description:
-      "Primary store across projects — schema design, migrations, query optimization.",
-  },
-  {
-    name: "Drizzle ORM",
-    description:
-      "Type-safe SQL with full TS inference. Migration tooling, schema introspection.",
-  },
-  {
-    name: "Redis",
-    description:
-      "Caching, rate limiting (sliding window / token bucket), session state.",
-  },
-  {
-    name: "Testcontainers",
-    description:
-      "Integration tests on real containerized infrastructure, not mocks: the app in CI against a freshly migrated DB, plus concurrency tests that verify advisory locks hold under parallel load.",
-  },
-  {
-    name: "Vercel AI SDK",
-    description:
-      "LLM integration: streaming, multi-step tool calling, structured output, provider-agnostic fallback.",
-  },
-  {
-    name: "Docker, CI/CD",
-    description:
-      "Self-managed deployment: GitHub Actions, Coolify on a VPS — SSL, env management, SSE-friendly proxying.",
+      "Docker, GitHub Actions, GHCR, Coolify and Traefik on a self-managed VPS; Prometheus metrics and alerting; on-call and incident triage across 10 production services.",
   },
 ];
 
@@ -182,7 +139,7 @@ export const workProjects: readonly WorkProject[] = [
     title: aiPrReviewerFacts.name,
     caseHref: aiPrReviewerFacts.caseRoute,
     tagline:
-      "Paste a GitHub PR link — get a streaming, line-by-line AI review. Multi-step agent built on Octokit, structured output, provider fallback, per-IP rate limiting.",
+      "Paste a GitHub PR link and get a streaming, line-by-line AI review. A multi-step agent on the Vercel AI SDK, with an Octokit adapter, structured output, provider failover and per-IP rate limiting.",
     accent: aiPrReviewerFacts.accent,
     media: {
       src: "/screenshots/reviewer-complete.png",
@@ -230,7 +187,7 @@ export const workProjects: readonly WorkProject[] = [
     linkRows: [
       {
         action: {
-          label: "Try it live",
+          label: "Try the demo",
           href: tameTheElephantFacts.demoUrl,
           external: true,
         },
@@ -249,7 +206,9 @@ export const workProjects: readonly WorkProject[] = [
 export const contactBody: ReactNode = (
   <>
     {"Open to "}
-    <span className="text-gold">senior roles</span>
-    {" and contract work — remote or on-site in the EU, async-friendly."}
+    <span className="text-gold">senior full-stack roles</span>
+    {
+      ": remote from Belgrade, or relocating to Cyprus or elsewhere in the EU. Email or Telegram works best."
+    }
   </>
 );

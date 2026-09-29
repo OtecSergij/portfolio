@@ -381,11 +381,11 @@ export const tameTheElephant: CaseStudy = {
             },
             {
               k: "Tested for real",
-              v: "400+ database tests",
+              v: "400+ integration tests",
               note: "every points rule, streak bonus, and race condition runs against a real PostgreSQL on every change — not mocked, with a dedicated parallel-request suite proving the economy can't double-spend",
             },
             {
-              k: "A finished product",
+              k: "A live product",
               v: "installable & offline",
               note: "an installable app that works without a connection, fully in English and Russian",
             },
@@ -466,7 +466,7 @@ export const tameTheElephant: CaseStudy = {
   ],
   cta: {
     heading: "See it running",
-    body: "Tame the Elephant is in open beta at tame.day — sign up with an email or via Google/GitHub. The UI ships in English and Russian, installs to a home screen, and works offline. The source is private, so the demo is the artifact: everything claimed on this page is observable in the product, and I'm happy to walk through the code behind any section in a call.",
+    body: "Tame the Elephant is live at tame.day — sign up with an email or via Google/GitHub. The UI ships in English and Russian, installs to a home screen, and works offline. The source is private, so the product is the artifact: try it, and I'm happy to walk through the code behind any section in a call.",
     actions: [
       {
         label: "Try it live",

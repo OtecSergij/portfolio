@@ -68,7 +68,10 @@ export const aiPrReviewer: CaseStudy = {
     { k: "Role", v: "Solo · Design + Build + Ops" },
     { k: "Timeline", v: "May — Jul 2026" },
     { k: "Status", v: aiPrReviewerFacts.status.label },
-    { k: "Stack", v: "TS · Next.js · AI SDK · Postgres · Redis" },
+    {
+      k: "Stack",
+      v: "TypeScript · Next.js · Vercel AI SDK · PostgreSQL · Redis",
+    },
   ],
   heroFigureCaption:
     "Fig 01 · The review workspace mid-run — PR header, streaming issue cards, agent console",
@@ -306,7 +309,7 @@ export const aiPrReviewer: CaseStudy = {
           type: "list",
           items: [
             "Findings as tool calls, not prose — Zod at the boundary, content-hash dedup, and a UI that never parses free text.",
-            "Server-side enrichment — the model sends locations; the backend slices real diff lines, so hallucinated code can't render.",
+            "Server-side enrichment — the model sends locations; the backend slices real diff lines, so a hallucinated quote can't render; suggested fixes are shown as the model's proposal.",
             "Failover carries the transcript — a sanitized tool-call history hands off mid-review instead of restarting from zero.",
             "Fail-open rate limiter — Redis being down costs limits, not availability; 500 ms budget on the Lua eval.",
             "Derived share slugs — hashed from the PR identity, so the same review maps to the same URL forever.",
@@ -393,8 +396,8 @@ export const aiPrReviewer: CaseStudy = {
           items: [
             {
               k: "Output you can trust",
-              v: "no invented code",
-              note: "every snippet is pulled straight from your PR and linked to the exact lines on GitHub — the reviewer can't make code up",
+              v: "no invented quotes",
+              note: "every quoted snippet is sliced from your PR; suggested fixes are shown as the model's proposal",
             },
             {
               k: "Resilience",
@@ -403,7 +406,7 @@ export const aiPrReviewer: CaseStudy = {
             },
             {
               k: "Runs in public",
-              v: "no signup, abuse-proofed",
+              v: "no signup, rate-limited",
               note: "a free endpoint spends real API budget, so it caps usage per person — and a glitch in that cap can't take the site down",
             },
             {

@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { DownloadCvButton } from "@/components/home/DownloadCvButton";
 import { EmailButton } from "@/components/home/EmailButton";
 import { LinkedInButton } from "@/components/home/LinkedInButton";
 import { Button } from "@/components/ui/Button";
@@ -35,7 +36,8 @@ export function Hero() {
             <Typewriter text={site.tagline} />
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
-            <EmailButton />
+            <DownloadCvButton />
+            <EmailButton variant="ghost" />
             <LinkedInButton />
             <Button
               variant="ghost"

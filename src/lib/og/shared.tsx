@@ -194,7 +194,7 @@ export function OgHero({
   descriptionMaxWidth: number;
 }) {
   return (
-    <>
+    <div style={{ display: "flex", flexDirection: "column" }}>
       <div
         style={{
           fontFamily: "JetBrains Mono",
@@ -237,7 +237,7 @@ export function OgHero({
       >
         {description}
       </div>
-    </>
+    </div>
   );
 }
 

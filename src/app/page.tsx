@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { DownloadCvButton } from "@/components/home/DownloadCvButton";
 import { EmailButton } from "@/components/home/EmailButton";
 import { Hero } from "@/components/home/Hero";
 import { LinkedInButton } from "@/components/home/LinkedInButton";
@@ -103,20 +104,37 @@ export default function Home() {
                     <div className="mt-3 font-mono text-[12px] tracking-[0.12em] text-gold uppercase sm:col-span-2">
                       {row.role}
                     </div>
-                    <p className="mt-5 max-w-[760px] text-[16px] leading-[1.55] text-fg-mute sm:col-span-2">
-                      {row.description}
-                    </p>
+                    <div className="mt-5 max-w-[760px] text-[16px] leading-[1.55] text-fg-mute sm:col-span-2">
+                      {row.descriptor.map((line) => (
+                        <p key={line} className="mb-1.5">
+                          {line}
+                        </p>
+                      ))}
+                      <ul className="mt-4 list-disc space-y-2 pl-5 marker:text-gold">
+                        {row.bullets.map((bullet) => (
+                          <li key={bullet}>{bullet}</li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 ))}
               </div>
             </Section>
 
-            <Section id="stack" title="Stack">
+            <Section id="projects" title="Projects" meta={workMeta}>
+              <div className="grid grid-cols-1 gap-7 lg:grid-cols-2">
+                {workProjects.map((project) => (
+                  <WorkCard key={project.title} project={project} />
+                ))}
+              </div>
+            </Section>
+
+            <Section id="stack" title="Stack" align="right">
               <div className="border-t border-rule-1">
                 {stackRows.map((row) => (
                   <div
                     key={row.name}
-                    className="grid grid-cols-1 gap-y-1 border-b border-rule-1 py-5.5 sm:grid-cols-[200px_1fr] sm:items-baseline sm:gap-x-14"
+                    className="grid grid-cols-1 gap-y-1 border-b border-rule-1 py-5.5 xl:grid-cols-[260px_1fr] xl:items-baseline xl:gap-x-14"
                   >
                     <div className="font-mono text-[14px] tracking-[0.04em] text-fg">
                       {row.name}
@@ -135,26 +153,14 @@ export default function Home() {
               </div>
             </Section>
 
-            <Section
-              id="projects"
-              title="Projects"
-              align="right"
-              meta={workMeta}
-            >
-              <div className="grid grid-cols-1 gap-7 lg:grid-cols-2">
-                {workProjects.map((project) => (
-                  <WorkCard key={project.title} project={project} />
-                ))}
-              </div>
-            </Section>
-
-            <Section id="contact" title="Contact" align="right">
+            <Section id="contact" title="Contact">
               <div className="max-w-[720px]">
                 <p className="mb-9 text-[19px] leading-[1.55] text-pretty text-fg md:text-[21px]">
                   {contactBody}
                 </p>
                 <div className="flex flex-wrap gap-3">
-                  <EmailButton size="lg" />
+                  <DownloadCvButton size="lg" />
+                  <EmailButton size="lg" variant="ghost" />
                   <LinkedInButton size="lg" />
                   <Button
                     size="lg"

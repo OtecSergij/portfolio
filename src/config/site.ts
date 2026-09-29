@@ -22,11 +22,11 @@ export const site: SiteConfig = {
   name: "Dmitry Zablotsky",
   role: "Senior Full-stack Engineer",
   tagline:
-    "Six years of production TypeScript across React and Node. I ship whole products — UI, API, tests, deploy.",
+    "Six years of production TypeScript: React since 2020, full-stack with Node.js and PostgreSQL since 2024. I take products from requirements to production and stay on call for them.",
   location: "Belgrade, Serbia",
   siteUrl: "https://zablotsky.dev",
   repoUrl: "https://github.com/OtecSergij/portfolio",
-  updatedAt: "2026-09-13",
+  updatedAt: "2026-09-29",
   contacts: {
     email: { user: "zablotskydev", domain: "gmail.com" },
     telegram: "otec_sergij",
@@ -49,6 +49,6 @@ export type NavItem = {
 export const navItems: readonly NavItem[] = [
   { id: "about", label: "About" },
   { id: "experience", label: "Experience" },
-  { id: "stack", label: "Stack" },
   { id: "projects", label: "Projects" },
+  { id: "stack", label: "Stack" },
 ];

@@ -19,8 +19,8 @@ const aiPrReviewerStatus = {
 } as const satisfies Required<StatusChip>;
 
 const tameTheElephantStatus = {
-  led: "gold",
-  label: "Open beta",
+  led: "ok",
+  label: "Live",
 } as const satisfies Required<StatusChip>;
 
 export const aiPrReviewerFacts = {
@@ -29,7 +29,7 @@ export const aiPrReviewerFacts = {
   accent: "ok",
   badges: [
     aiPrReviewerStatus,
-    { label: "Solo built" },
+    { label: "Solo project" },
     { label: "Open source" },
   ],
   stackChips: ["Next.js", "Vercel AI SDK", "PostgreSQL", "Redis"],
@@ -37,7 +37,7 @@ export const aiPrReviewerFacts = {
   demoUrl: "https://reviewer.zablotsky.dev",
   sourceUrl: "https://github.com/OtecSergij/ai-pr-reviewer",
   caseRoute: "/ai-pr-reviewer",
-  updatedAt: "2026-07-22",
+  updatedAt: "2026-09-29",
 } as const satisfies ProjectFacts;
 
 export const tameTheElephantFacts = {
@@ -46,7 +46,7 @@ export const tameTheElephantFacts = {
   accent: "gold",
   badges: [
     tameTheElephantStatus,
-    { label: "Solo built" },
+    { label: "Solo project" },
     { label: "Installable PWA" },
   ],
   stackChips: ["React", "Express", "Prisma", "PostgreSQL"],
@@ -54,5 +54,5 @@ export const tameTheElephantFacts = {
   demoUrl: "https://tame.day/demo",
   sourceUrl: null,
   caseRoute: "/tame-the-elephant",
-  updatedAt: "2026-07-22",
+  updatedAt: "2026-09-29",
 } as const satisfies ProjectFacts;
