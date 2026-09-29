@@ -39,6 +39,23 @@ clears two moderate `npm audit` advisories (GHSA-qx2v-qp2m-jg93) and dedupes
 with Tailwind 4's `postcss@^8.5.15`. Drop the override once Next depends on
 `postcss >= 8.5.10`.
 
+### CV
+
+The `prebuild` hook renders the public resume PDF (no phone) from
+`src/content/resume.ts` into `public/cv/`, so `npm run build` always ships a
+PDF that matches the data. The folder is generated and gitignored.
+
+The application variant adds a phone number and refuses any output path
+inside the repository; by default it goes to `~/Downloads/`:
+
+```bash
+CV_PHONE='+381 …' npm run build:cv -- --variant application [--out <file>]
+```
+
+Prefix `NEXT_PUBLIC_LINKEDIN_URL=…` to add the LinkedIn line. The script runs
+under `tsx`, which does not read `.env` files, so both variables have to come
+from the shell.
+
 ## Environment
 
 The site runs with no environment set — every variable is optional.

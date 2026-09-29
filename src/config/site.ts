@@ -9,6 +9,7 @@ export type SiteConfig = {
   name: string;
   role: string;
   tagline: string;
+  location: string;
   siteUrl: string;
   repoUrl: string;
   updatedAt: string;
@@ -22,6 +23,7 @@ export const site: SiteConfig = {
   role: "Senior Full-stack Engineer",
   tagline:
     "Six years of production TypeScript across React and Node. I ship whole products — UI, API, tests, deploy.",
+  location: "Belgrade, Serbia",
   siteUrl: "https://zablotsky.dev",
   repoUrl: "https://github.com/OtecSergij/portfolio",
   updatedAt: "2026-09-13",

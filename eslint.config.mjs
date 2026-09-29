@@ -5,11 +5,13 @@ import prettier from "eslint-config-prettier/flat";
 import importPlugin from "eslint-plugin-import";
 import tseslint from "typescript-eslint";
 
+const typeScriptFiles = ["src/**/*.{ts,tsx}", "scripts/**/*.{ts,tsx}"];
+
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
   {
-    files: ["src/**/*.{ts,tsx}"],
+    files: typeScriptFiles,
     extends: [tseslint.configs.strictTypeChecked],
     languageOptions: {
       parserOptions: {
@@ -19,8 +21,9 @@ const eslintConfig = defineConfig([
     },
   },
   {
-    files: ["src/**/*.{ts,tsx}"],
+    files: typeScriptFiles,
     plugins: { import: importPlugin },
+    settings: { "import/internal-regex": "^@/" },
     rules: {
       "import/order": [
         "error",
@@ -45,6 +48,7 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
     "design/**",
+    ".claude/**",
   ]),
 ]);
 
