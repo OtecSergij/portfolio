@@ -479,7 +479,7 @@ export const aiPrReviewer: CaseStudy = {
     actions: [
       {
         label: "Try it live",
-        href: aiPrReviewerFacts.demoUrl,
+        href: aiPrReviewerFacts.productUrl,
         external: true,
         arrow: "→",
         variant: "solid",

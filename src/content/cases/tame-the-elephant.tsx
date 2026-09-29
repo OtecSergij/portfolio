@@ -470,14 +470,14 @@ export const tameTheElephant: CaseStudy = {
     actions: [
       {
         label: "Try it live",
-        href: tameTheElephantFacts.demoUrl,
+        href: tameTheElephantFacts.productUrl,
         external: true,
         arrow: "→",
         variant: "solid",
       },
       {
         label: "Try the demo (no signup)",
-        href: `${tameTheElephantFacts.demoUrl}/demo`,
+        href: tameTheElephantFacts.demoUrl,
         external: true,
         arrow: "→",
       },

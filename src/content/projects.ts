@@ -6,6 +6,7 @@ export type ProjectFacts = {
   accent: LedTone;
   badges: readonly StatusChip[];
   stackChips: readonly string[];
+  productUrl: string;
   demoUrl: string;
   sourceUrl: string | null;
   caseRoute: string;
@@ -32,6 +33,7 @@ export const aiPrReviewerFacts = {
     { label: "Open source" },
   ],
   stackChips: ["Next.js", "Vercel AI SDK", "PostgreSQL", "Redis"],
+  productUrl: "https://reviewer.zablotsky.dev",
   demoUrl: "https://reviewer.zablotsky.dev",
   sourceUrl: "https://github.com/OtecSergij/ai-pr-reviewer",
   caseRoute: "/ai-pr-reviewer",
@@ -48,6 +50,7 @@ export const tameTheElephantFacts = {
     { label: "Installable PWA" },
   ],
   stackChips: ["React", "Express", "Prisma", "PostgreSQL"],
+  productUrl: "https://tame.day",
   demoUrl: "https://tame.day/demo",
   sourceUrl: null,
   caseRoute: "/tame-the-elephant",

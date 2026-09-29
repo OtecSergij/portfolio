@@ -30,7 +30,7 @@ export function CaseJsonLd({
     description: taglineText(study),
     applicationCategory,
     operatingSystem: "Web",
-    url: facts.demoUrl,
+    url: facts.productUrl,
     isAccessibleForFree: true,
     author: {
       "@type": "Person",
